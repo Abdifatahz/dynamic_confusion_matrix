@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Confusion Matrix Summary Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Dynamic Confusion Matrix and Performance Metrics Visualization Tool</h2>
+
+    <form id="classForm">
+      <p style="font-size: 1.4em">
+        This title highlights the dynamic nature of the tool and its focus on
+        visualizing confusion matrices and performance metrics, making it clear
+        and attractive for users who might be interested in machine learning
+        evaluation tools.
+      </p>
+      <label for="numClasses">Number of Classes:</label>
+      <input
+        type="number"
+        id="numClasses"
+        name="numClasses"
+        min="2"
+        max="10"
+        value="3"
+        required
+      />
+      <button type="submit">Create Matrix</button>
+    </form>
+
+    <h2>Enter Confusion Matrix Data</h2>
+    <form id="confusionMatrixForm">
+      <div id="matrixInputs"></div>
+      <button type="submit">Generate Summary Table</button>
+      <span style="color: orange; text-transform: uppercase"
+        >If you update Number of Classes don't forget to Re-generate again</span
+      >
+    </form>
+
+    <h2>Interactive Confusion Matrix</h2>
+    <div class="table-container">
+      <table id="confusionMatrixTable">
+        <thead>
+          <!-- Header will be populated here -->
+        </thead>
+        <tbody>
+          <!-- Matrix rows will be populated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Summary Table</h2>
+    <div class="table-container">
+      <table id="summaryTable">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th class="highlight">TP</th>
+            <th class="highlight">TN</th>
+            <th class="highlight">FP</th>
+            <th class="highlight">FN</th>
+            <th>Accuracy</th>
+            <th>Recall</th>
+            <th>Precision</th>
+            <th>F1-Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be populated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <p>@ <a href="https://awil.dev/">Abdifatah Awil</a> & ChatGPT</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

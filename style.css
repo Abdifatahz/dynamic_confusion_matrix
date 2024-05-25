@@ -1,0 +1,114 @@
+:root {
+  --primary-color: #7e17ea;
+  --primary-hover-color: #0056b3;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --border-color: #ccc;
+  --highlight-color: #e0e0fa;
+  --high-accuracy-color: #d4edda;
+  --moderate-accuracy-color: #fff3cd;
+  --low-accuracy-color: #f8d7da;
+  --input-width: 60px;
+  --input-padding: 5px;
+  --input-margin: 5px;
+  --input-border-radius: 5px;
+  --button-padding: 10px 20px;
+  --button-border-radius: 5px;
+  --table-width: 100%;
+  --table-margin-bottom: 20px;
+  --table-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --table-container-width: 90%;
+  --table-container-max-width: 1000px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+form {
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+#numClasses {
+  width: 50%;
+  padding: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: var(--input-width);
+  padding: var(--input-padding);
+  margin: var(--input-margin);
+  border: 1px solid var(--border-color);
+  border-radius: var(--input-border-radius);
+}
+
+button {
+  padding: var(--button-padding);
+  margin-top: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+table {
+  width: var(--table-width);
+  border-collapse: collapse;
+  margin-bottom: var(--table-margin-bottom);
+  box-shadow: var(--table-box-shadow);
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.highlight {
+  background-color: var(--highlight-color);
+}
+
+.high-accuracy {
+  background-color: var(--high-accuracy-color); /* Green */
+}
+
+.moderate-accuracy {
+  background-color: var(--moderate-accuracy-color); /* Orange */
+}
+
+.low-accuracy {
+  background-color: var(--low-accuracy-color); /* Red */
+}
+
+.table-container {
+  width: var(--table-container-width);
+  max-width: var(--table-container-max-width);
+  overflow-x: auto;
+}
